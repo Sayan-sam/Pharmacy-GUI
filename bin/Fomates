@@ -1,0 +1,17 @@
+public void usernameMatch()
+	{
+		JFrame frame = new JFrame();
+		JLabel error = new JLabel("Username Already Exist!!!");
+		error.setBounds(20,30,150,30);
+		JButton ok = new JButton("Ok");
+		ok.setBounds(60,60,60,20);
+		
+		frame.add(error);
+		frame.add(ok);
+		frame.setSize(200,150);
+		frame.getContentPane().setBackground(Color.pink);
+		frame.setLocationRelativeTo(null);
+		frame.setLayout(null);
+		frame.setVisible(true);
+		frame.setResizable(false);
+	}

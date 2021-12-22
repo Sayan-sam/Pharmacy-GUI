@@ -1,0 +1,103 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class Accounts {
+
+	jdbcmethods jm = new jdbcmethods();
+	JFrame loggedInFrame = new JFrame("PHARMACY GUI");
+	JLabel heading, sidePic, dispUser;
+	JButton purchase, stock, sales, settings;
+	JMenuItem logOut, changePw, adminJobs, userManagement;
+	JPopupMenu pm = new  JPopupMenu("SettingsPopUp");
+	
+	
+	Accounts(String username)
+	{
+		heading = new JLabel("HERE WILL GO THE HEADING", SwingConstants.CENTER);
+		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
+		purchase = new JButton("PURCHASE");
+		stock = new JButton("STOCK");
+		sales = new JButton("SALES");
+		dispUser = new JLabel("Welcome "+username+"!!!");
+	
+		
+		heading.setBackground(Color.blue);
+		heading.setOpaque(true);
+		heading.setBounds(0,0,1080,80);
+		
+		sidePic.setBackground(Color.red);
+		sidePic.setOpaque(true);
+		sidePic.setBounds(720,80,360,645);
+		
+		dispUser.setForeground(Color.red);
+		dispUser.setBackground(Color.pink);
+		dispUser.setOpaque(true);
+		dispUser.setBounds(110,80,500,30);
+		dispUser.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		
+		
+		stock.setBounds(280,260,160,60);
+		stock.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		stock.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+					new Stock(username);
+					loggedInFrame.dispose();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}});
+		
+		purchase.setBounds(280,360,160,60);
+		purchase.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		purchase.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				loggedInFrame.dispose();
+				try {
+					new Purchase(username);
+					loggedInFrame.dispose();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}});
+		
+		sales.setBounds(280,460,160,60);
+		sales.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		sales.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					new Sales(username);
+					loggedInFrame.dispose();
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}});
+		
+		loggedInFrame.add(heading);
+		loggedInFrame.add(sidePic);
+		loggedInFrame.add(purchase);
+		loggedInFrame.add(stock);
+		loggedInFrame.add(sales);
+		loggedInFrame.add(dispUser);
+		
+		loggedInFrame.setSize(1080,720);
+		loggedInFrame.getContentPane().setBackground(Color.pink);
+		loggedInFrame.setLocationRelativeTo(null);
+		loggedInFrame.setLayout(null);
+		loggedInFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		loggedInFrame.setVisible(true);
+		loggedInFrame.setResizable(false);
+	}
+	
+	
+}
