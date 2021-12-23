@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -161,7 +162,8 @@ public class AdminSales {
 		stock.getContentPane().add(scrollableBill);
 		stock.add(stockList);
 
-		
+		stock.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		stock.setSize(1080,720);
 		stock.getContentPane().setBackground(Color.pink);
 		stock.setLocationRelativeTo(null);
@@ -234,7 +236,9 @@ public class AdminSales {
 			trancBill.setBounds(0,0,480,480);
 			
 		frame.add(trancBill);
-			
+		
+		frame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		frame.setSize(480,480);
 		frame.getContentPane().setBackground(Color.pink);
 		frame.setLocationRelativeTo(null);

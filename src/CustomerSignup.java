@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -188,6 +189,9 @@ public class CustomerSignup {
 		customerSignup.add(tfFName);
 		customerSignup.add(tfLName);
 		customerSignup.add(datePicker);
+		
+		customerSignup.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		
 		customerSignup.getRootPane().setDefaultButton(proceed);
 		customerSignup.setSize(580,360);

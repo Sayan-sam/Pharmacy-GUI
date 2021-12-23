@@ -57,7 +57,9 @@ public class StartPage implements ActionListener{
 		startFrame.add(tfUserId);
 		startFrame.add(tfPassword);
 		startFrame.add(lbVerify);
-		
+			
+		startFrame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		startFrame.setSize(1080,720);
 		startFrame.getRootPane().setDefaultButton(logIn);
 		startFrame.getContentPane().setBackground(Color.pink);

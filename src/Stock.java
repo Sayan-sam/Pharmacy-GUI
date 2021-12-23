@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -112,6 +113,8 @@ public class Stock {
 		stock.add(sidePic);
 		stock.getContentPane().add(scrollableStock);
 		stock.add(stockList);
+
+		stock.setIconImage(new ImageIcon("Pharmacy.png").getImage());
 
 		
 		stock.setSize(1080,720);

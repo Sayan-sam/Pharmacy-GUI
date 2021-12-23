@@ -10,6 +10,7 @@ import java.awt.event.ItemListener;
 import java.awt.print.PrinterException;
 import java.util.Arrays;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -316,7 +317,8 @@ public class BillingPage {
 		billingPage.add(stockExceeded);
 		billingPage.getRootPane().setDefaultButton(add);
 
-		
+		billingPage.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		billingPage.setSize(1080,720);
 		billingPage.getContentPane().setBackground(Color.pink);
 		billingPage.setLocationRelativeTo(null);

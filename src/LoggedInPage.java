@@ -163,6 +163,8 @@ public class LoggedInPage {
 		loggedInFrame.add(billing);
 		loggedInFrame.add(accounts);
 		loggedInFrame.add(dispUser);
+		loggedInFrame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		
 		loggedInFrame.setSize(1080,720);
 		loggedInFrame.getContentPane().setBackground(Color.pink);

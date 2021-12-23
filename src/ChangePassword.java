@@ -139,6 +139,8 @@ public class ChangePassword {
 		changePasswordFrame.add(confirm);
 		changePasswordFrame.add(cancel);
 
+		changePasswordFrame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		changePasswordFrame.getRootPane().setDefaultButton(confirm);
 		changePasswordFrame.setSize(720,480);
 		changePasswordFrame.getContentPane().setBackground(Color.pink);

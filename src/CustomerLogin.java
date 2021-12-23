@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -126,6 +127,9 @@ public class CustomerLogin {
 		customerLogin.add(proceed);
 		customerLogin.add(cancel);
 		customerLogin.add(signup);
+		
+		customerLogin.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		
 		customerLogin.getRootPane().setDefaultButton(proceed);
 		customerLogin.setSize(580,360);

@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -259,7 +260,7 @@ public class CreateUser {
 		
 
 		
-		//customerSignup.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+		customerSignup.setIconImage(new ImageIcon("Pharmacy.png").getImage());
 		customerSignup.getRootPane().setDefaultButton(proceed);
 		customerSignup.setSize(580,410);
 		customerSignup.getContentPane().setBackground(Color.pink);
@@ -284,6 +285,8 @@ public class CreateUser {
 				frame.dispose();
 			}});
 		
+		frame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		frame.add(error);
 		frame.add(ok);
 		frame.setSize(200,150);

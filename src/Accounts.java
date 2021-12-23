@@ -12,7 +12,8 @@ public class Accounts {
 	JButton purchase, stock, sales, settings;
 	JMenuItem logOut, changePw, adminJobs, userManagement;
 	JPopupMenu pm = new  JPopupMenu("SettingsPopUp");
-	
+	JButton home, back;
+
 	
 	Accounts(String username)
 	{
@@ -22,7 +23,8 @@ public class Accounts {
 		stock = new JButton("STOCK");
 		sales = new JButton("SALES");
 		dispUser = new JLabel("Welcome "+username+"!!!");
-	
+		home = new JButton(new ImageIcon("home.png"));
+		back = new JButton(new ImageIcon("back.png"));
 		
 		heading.setBackground(Color.blue);
 		heading.setOpaque(true);
@@ -82,6 +84,8 @@ public class Accounts {
 					e1.printStackTrace();
 				}
 			}});
+		home.setBounds(10,90,30,30);
+		back.setBounds(50,90,30,30);
 		
 		loggedInFrame.add(heading);
 		loggedInFrame.add(sidePic);
@@ -89,6 +93,9 @@ public class Accounts {
 		loggedInFrame.add(stock);
 		loggedInFrame.add(sales);
 		loggedInFrame.add(dispUser);
+		loggedInFrame.add(home);
+		loggedInFrame.add(back);
+		loggedInFrame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
 		
 		loggedInFrame.setSize(1080,720);
 		loggedInFrame.getContentPane().setBackground(Color.pink);

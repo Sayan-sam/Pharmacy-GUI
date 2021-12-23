@@ -10,6 +10,7 @@ import java.awt.event.ItemListener;
 import java.awt.print.PrinterException;
 import java.util.Arrays;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -328,6 +329,8 @@ public class BuyingPage {
 		billingPage.add(updateMed);
 		billingPage.getRootPane().setDefaultButton(add);
 
+		billingPage.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		
 		billingPage.setSize(1080,720);
 		billingPage.getContentPane().setBackground(Color.pink);
@@ -432,6 +435,8 @@ public class BuyingPage {
 		frame.add(newRate);
 		frame.add(next);
 		
+		frame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		frame.setSize(400,200);
 		frame.getContentPane().setBackground(Color.pink);
 		frame.setLocationRelativeTo(null);
@@ -681,6 +686,9 @@ public class BuyingPage {
 		
 		frame.add(proceed);
 		frame.add(cancel);
+		
+		frame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
+
 		
 		frame.setSize(580,410);
 		frame.getContentPane().setBackground(Color.pink);
