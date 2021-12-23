@@ -43,7 +43,7 @@ public class AdminSales {
 	{
 		stock.getContentPane().setLayout(new FlowLayout());
 		billContent = new String[0][4];
-		heading = new JLabel("HERE WILL GO THE HEADING", SwingConstants.CENTER);
+		heading = new JLabel(new ImageIcon("PharmacyM.png"));
 		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
 		stockList = new JLabel("Sales of the whole company", SwingConstants.CENTER);
 		
@@ -152,8 +152,6 @@ public class AdminSales {
 		stockList.setFont(new Font("Times New Roman", Font.PLAIN,22));
 		
 		
-		heading.setBackground(Color.blue);
-		heading.setOpaque(true);
 		heading.setBounds(0,0,1080,80);
 		
 		sidePic.setBackground(Color.red);

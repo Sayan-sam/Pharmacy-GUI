@@ -17,7 +17,7 @@ public class Accounts {
 	
 	Accounts(String username)
 	{
-		heading = new JLabel("HERE WILL GO THE HEADING", SwingConstants.CENTER);
+		heading = new JLabel(new ImageIcon("PharmacyM.png"));
 		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
 		purchase = new JButton("PURCHASE");
 		stock = new JButton("STOCK");
@@ -25,8 +25,6 @@ public class Accounts {
 		dispUser = new JLabel("Welcome "+username+"!!!");
 		
 		
-		heading.setBackground(Color.blue);
-		heading.setOpaque(true);
 		heading.setBounds(0,0,1080,80);
 		
 		sidePic.setBackground(Color.red);
@@ -34,7 +32,7 @@ public class Accounts {
 		sidePic.setBounds(720,80,360,645);
 		
 		dispUser.setForeground(Color.red);
-		dispUser.setBackground(Color.pink);
+		dispUser.setBackground(Color.decode("#ADD8E6"));
 		dispUser.setOpaque(true);
 		dispUser.setBounds(110,80,500,30);
 		dispUser.setFont(new Font("Times New Roman", Font.PLAIN, 24));
@@ -120,7 +118,7 @@ public class Accounts {
 		loggedInFrame.setIconImage(new ImageIcon("Pharmacy.png").getImage());
 		
 		loggedInFrame.setSize(1080,720);
-		loggedInFrame.getContentPane().setBackground(Color.pink);
+		loggedInFrame.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		loggedInFrame.setLocationRelativeTo(null);
 		loggedInFrame.setLayout(null);
 		loggedInFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

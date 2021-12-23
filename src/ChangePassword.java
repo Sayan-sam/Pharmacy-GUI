@@ -35,13 +35,13 @@ public class ChangePassword {
 		wrongDetails.setBounds(265,20,280,20);
 		wrongDetails.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		wrongDetails.setForeground(Color.red);
-		wrongDetails.setBackground(Color.pink);
+		wrongDetails.setBackground(Color.decode("#ADD8E6"));
 		
 		
 		matchPasswords.setBounds(425,330,200,20);
 		matchPasswords.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		matchPasswords.setForeground(Color.red);
-		matchPasswords.setBackground(Color.pink);
+		matchPasswords.setBackground(Color.decode("#ADD8E6"));
 		
 		lbUsername.setBounds(125,45,160,60);
 		lbUsername.setFont(new Font("Times New Roman", Font.PLAIN, 20));
@@ -143,7 +143,7 @@ public class ChangePassword {
 
 		changePasswordFrame.getRootPane().setDefaultButton(confirm);
 		changePasswordFrame.setSize(720,480);
-		changePasswordFrame.getContentPane().setBackground(Color.pink);
+		changePasswordFrame.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		changePasswordFrame.setLocationRelativeTo(null);
 		changePasswordFrame.setLayout(null);
 		changePasswordFrame.setVisible(true);

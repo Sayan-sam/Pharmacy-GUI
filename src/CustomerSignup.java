@@ -136,6 +136,8 @@ public class CustomerSignup {
 						jm.updateCustomer(number, tfFName.getText(), tfLName.getText(),
 						ft.format(selectedDate));
 						System.out.print("Inside IF");
+						new BillingPage(username, number);
+						customerSignup.dispose();
 					}
 					else
 					{
@@ -195,7 +197,7 @@ public class CustomerSignup {
 		
 		customerSignup.getRootPane().setDefaultButton(proceed);
 		customerSignup.setSize(580,360);
-		customerSignup.getContentPane().setBackground(Color.pink);
+		customerSignup.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		customerSignup.setLocationRelativeTo(null);
 		customerSignup.setLayout(null);
 		customerSignup.setVisible(true);

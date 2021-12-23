@@ -110,7 +110,7 @@ public class CustomerLogin {
 				
 				customerLogin.dispose();
 				try {
-					new LoggedInPage("Hello");
+					new LoggedInPage(username);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
@@ -133,7 +133,7 @@ public class CustomerLogin {
 		
 		customerLogin.getRootPane().setDefaultButton(proceed);
 		customerLogin.setSize(580,360);
-		customerLogin.getContentPane().setBackground(Color.pink);
+		customerLogin.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		customerLogin.setLocationRelativeTo(null);
 		customerLogin.setLayout(null);
 		customerLogin.setVisible(true);

@@ -15,7 +15,7 @@ public class StartPage implements ActionListener{
 	
 	StartPage()
 	{
-		heading = new JLabel("HERE WILL GO THE HEADING", SwingConstants.CENTER);
+		heading = new JLabel(new ImageIcon("Welcome.png"));
 		logIn = new JButton("Log In");
 		lbUserId = new JLabel("UserId: ", SwingConstants.CENTER);
 		lbPassword = new JLabel("Password: ", SwingConstants.CENTER);
@@ -25,8 +25,6 @@ public class StartPage implements ActionListener{
 		
 		
 		
-		heading.setBackground(Color.blue);
-		heading.setOpaque(true);
 		heading.setBounds(0,0,1080,80);
 		
 		logIn.setBounds(460,500,160,60);
@@ -62,7 +60,7 @@ public class StartPage implements ActionListener{
 
 		startFrame.setSize(1080,720);
 		startFrame.getRootPane().setDefaultButton(logIn);
-		startFrame.getContentPane().setBackground(Color.pink);
+		startFrame.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		startFrame.setLocationRelativeTo(null);
 		startFrame.setLayout(null);
 		startFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

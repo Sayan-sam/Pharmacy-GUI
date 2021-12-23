@@ -16,9 +16,9 @@ public class LoggedInPage {
 	
 	LoggedInPage(String username)
 	{
-		heading = new JLabel("HERE WILL GO THE HEADING", SwingConstants.CENTER);
-		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
-		settings = new JButton("SETTINGS");
+		heading = new JLabel(new ImageIcon("PharmacyM.png"));
+		sidePic = new JLabel(new ImageIcon("LoggedIn.png"));
+		settings = new JButton(new ImageIcon("Settings.png"));
 		purchase = new JButton("BUY MEDS");
 		billing = new JButton("BILLING");
 		accounts = new JButton("ACCOUNTS");
@@ -95,26 +95,21 @@ public class LoggedInPage {
 		pm.add(logOut);
 		
 		
-		heading.setBackground(Color.blue);
-		heading.setOpaque(true);
 		heading.setBounds(0,0,1080,80);
 		
-		sidePic.setBackground(Color.red);
-		sidePic.setOpaque(true);
 		sidePic.setBounds(720,80,360,645);
 		
 		dispUser.setForeground(Color.red);
-		dispUser.setBackground(Color.pink);
+		dispUser.setBackground(Color.decode("#ADD8E6"));
 		dispUser.setOpaque(true);
 		dispUser.setBounds(10,80,500,30);
 		dispUser.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		
-		settings.setBounds(640,80,80,30);
-		settings.setFont(new Font("Times New Roman", Font.PLAIN, 9));
+		settings.setBounds(640,90,32,32);
 		settings.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
 			{
-				pm.show(settings, 0, 30);
+				pm.show(settings, 0, 32);
 			}
 		});
 		
@@ -155,6 +150,8 @@ public class LoggedInPage {
 			}
 			
 		});
+		settings.setBorder(BorderFactory.createEmptyBorder());
+		settings.setContentAreaFilled(false);
 		
 		loggedInFrame.add(heading);
 		loggedInFrame.add(sidePic);
@@ -167,7 +164,7 @@ public class LoggedInPage {
 
 		
 		loggedInFrame.setSize(1080,720);
-		loggedInFrame.getContentPane().setBackground(Color.pink);
+		loggedInFrame.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		loggedInFrame.setLocationRelativeTo(null);
 		loggedInFrame.setLayout(null);
 		loggedInFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

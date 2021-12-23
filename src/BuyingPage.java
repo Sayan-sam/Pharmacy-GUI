@@ -53,7 +53,7 @@ public class BuyingPage {
 	{
 		billingPage.getContentPane().setLayout(new FlowLayout());
 		billContent = new String[0][8];
-		heading = new JLabel("HERE WILL GO THE HEADING", SwingConstants.CENTER);
+		heading = new JLabel(new ImageIcon("PharmacyM.png"));
 		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
 		pm = new  JPopupMenu("Search Popup");
 		lbmedName = new JLabel("Medicine Name");
@@ -153,8 +153,6 @@ public class BuyingPage {
 		
 		
 		
-		heading.setBackground(Color.blue);
-		heading.setOpaque(true);
 		heading.setBounds(0,0,1080,80);
 		
 		sidePic.setBackground(Color.red);
@@ -363,7 +361,7 @@ public class BuyingPage {
 		billingPage.add(back);
 		
 		billingPage.setSize(1080,720);
-		billingPage.getContentPane().setBackground(Color.pink);
+		billingPage.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		billingPage.setLocationRelativeTo(null);
 		billingPage.setLayout(null);
 		billingPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -661,7 +659,7 @@ public class BuyingPage {
 						
 						billingPage.dispose();
 						frame.dispose();
-						new BuyingPage("Hello");
+						new BuyingPage(username);
 						} catch (NumberFormatException e1) {
 						e1.printStackTrace();
 						tfprice.setText("Integer Value only");

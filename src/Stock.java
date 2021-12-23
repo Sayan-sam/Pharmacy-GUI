@@ -31,7 +31,7 @@ public class Stock {
 	{
 		stock.getContentPane().setLayout(new FlowLayout());
 		stockContent = new String[0][7];
-		heading = new JLabel("HERE WILL GO THE HEADING", SwingConstants.CENTER);
+		heading = new JLabel(new ImageIcon("PharmacyM.png"));
 		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
 		stockList = new JLabel("MEDICINE STOCK", SwingConstants.CENTER);
 		
@@ -104,8 +104,6 @@ public class Stock {
 		stockList.setFont(new Font("Times New Roman", Font.PLAIN,22));
 		
 		
-		heading.setBackground(Color.blue);
-		heading.setOpaque(true);
 		heading.setBounds(0,0,1080,80);
 		
 		sidePic.setBackground(Color.red);
@@ -151,7 +149,7 @@ public class Stock {
 		stock.add(back);
 		
 		stock.setSize(1080,720);
-		stock.getContentPane().setBackground(Color.pink);
+		stock.getContentPane().setBackground(Color.decode("#ADD8E6"));
 		stock.setLocationRelativeTo(null);
 		stock.setLayout(null);
 		stock.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
