@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -25,7 +26,7 @@ public class ManageUsers {
 	JComboBox<?> username;
 	String users[];
 	
-	ManageUsers() throws Exception
+	ManageUsers(String adminusername) throws Exception
 	{
 		int i;
 		for(i = 1; i > 0; i++)
@@ -131,9 +132,18 @@ public class ManageUsers {
 		
 		
 		
-		Update = new JButton("Update");
+		Update = new JButton("Create New Account");
 		Update.setBounds(80, 500, 200, 40);
 		Update.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		Update.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				stock.dispose();
+				new CreateUser(adminusername);
+			}
+			
+		});
 		
 		Delete = new JButton("Delete");
 		Delete.setBounds(80, 580, 200, 40);
@@ -147,7 +157,7 @@ public class ManageUsers {
 				{
 					jm.deleteAccount((String) username.getItemAt(username.getSelectedIndex()));
 					stock.dispose();
-					new ManageUsers();
+					new ManageUsers(adminusername);
 				}
 				catch(Exception ex)
 				{
@@ -241,6 +251,35 @@ public class ManageUsers {
 
 		stock.setIconImage(new ImageIcon("Pharmacy.png").getImage());
 
+		JButton home, back;
+
+		home = new JButton(new ImageIcon("home.png"));
+		back = new JButton(new ImageIcon("back.png"));
+
+
+		home.setBounds(10,90,30,30);
+		home.setBorder(BorderFactory.createEmptyBorder());
+		home.setContentAreaFilled(false);
+		home.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				stock.dispose();
+				new LoggedInPage(adminusername);
+			}});
+		back.setBounds(50,90,30,30);
+		back.setBorder(BorderFactory.createEmptyBorder());
+		back.setContentAreaFilled(false);
+		back.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				stock.dispose();
+				new LoggedInPage(adminusername);
+			}});
+
+		stock.add(home);
+		stock.add(back);
 		
 		stock.setSize(1080,720);
 		stock.getContentPane().setBackground(Color.pink);

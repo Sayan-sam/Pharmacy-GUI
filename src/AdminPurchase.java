@@ -2,6 +2,8 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.sql.Connection;
@@ -10,7 +12,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Date;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -159,6 +163,36 @@ public class AdminPurchase {
 		stock.add(sidePic);
 		stock.getContentPane().add(scrollableBill);
 		stock.add(stockList);
+		
+		JButton home, back;
+
+		home = new JButton(new ImageIcon("home.png"));
+		back = new JButton(new ImageIcon("back.png"));
+
+
+		home.setBounds(10,90,30,30);
+		home.setBorder(BorderFactory.createEmptyBorder());
+		home.setContentAreaFilled(false);
+		home.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				stock.dispose();
+				new LoggedInPage(username);
+			}});
+		back.setBounds(50,90,30,30);
+		back.setBorder(BorderFactory.createEmptyBorder());
+		back.setContentAreaFilled(false);
+		back.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				stock.dispose();
+				new LoggedInPage(username);
+			}});
+
+		stock.add(home);
+		stock.add(back);
 
 		stock.setIconImage(new ImageIcon("Pharmacy.png").getImage());
 		stock.setSize(1080,720);

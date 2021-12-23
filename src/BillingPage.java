@@ -10,6 +10,7 @@ import java.awt.event.ItemListener;
 import java.awt.print.PrinterException;
 import java.util.Arrays;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -317,6 +318,35 @@ public class BillingPage {
 		billingPage.add(stockExceeded);
 		billingPage.getRootPane().setDefaultButton(add);
 
+		JButton home, back;
+
+		home = new JButton(new ImageIcon("home.png"));
+		back = new JButton(new ImageIcon("back.png"));
+
+
+		home.setBounds(10,90,30,30);
+		home.setBorder(BorderFactory.createEmptyBorder());
+		home.setContentAreaFilled(false);
+		home.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				billingPage.dispose();
+				new LoggedInPage(username);
+			}});
+		back.setBounds(50,90,30,30);
+		back.setBorder(BorderFactory.createEmptyBorder());
+		back.setContentAreaFilled(false);
+		back.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				billingPage.dispose();
+				new LoggedInPage(username);
+			}});
+
+		billingPage.add(home);
+		billingPage.add(back);
 		billingPage.setIconImage(new ImageIcon("Pharmacy.png").getImage());
 
 		billingPage.setSize(1080,720);

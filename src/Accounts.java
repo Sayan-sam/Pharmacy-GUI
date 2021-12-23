@@ -12,7 +12,7 @@ public class Accounts {
 	JButton purchase, stock, sales, settings;
 	JMenuItem logOut, changePw, adminJobs, userManagement;
 	JPopupMenu pm = new  JPopupMenu("SettingsPopUp");
-	JButton home, back;
+	
 
 	
 	Accounts(String username)
@@ -23,8 +23,7 @@ public class Accounts {
 		stock = new JButton("STOCK");
 		sales = new JButton("SALES");
 		dispUser = new JLabel("Welcome "+username+"!!!");
-		home = new JButton(new ImageIcon("home.png"));
-		back = new JButton(new ImageIcon("back.png"));
+		
 		
 		heading.setBackground(Color.blue);
 		heading.setOpaque(true);
@@ -38,7 +37,7 @@ public class Accounts {
 		dispUser.setBackground(Color.pink);
 		dispUser.setOpaque(true);
 		dispUser.setBounds(110,80,500,30);
-		dispUser.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		dispUser.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		
 		
 		stock.setBounds(280,260,160,60);
@@ -84,8 +83,31 @@ public class Accounts {
 					e1.printStackTrace();
 				}
 			}});
+		JButton home, back;
+		
+		home = new JButton(new ImageIcon("home.png"));
+		back = new JButton(new ImageIcon("back.png"));
+		
 		home.setBounds(10,90,30,30);
+		home.setBorder(BorderFactory.createEmptyBorder());
+		home.setContentAreaFilled(false);
+		home.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				loggedInFrame.dispose();
+				new LoggedInPage(username);
+			}});
 		back.setBounds(50,90,30,30);
+		back.setBorder(BorderFactory.createEmptyBorder());
+		back.setContentAreaFilled(false);
+		back.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				loggedInFrame.dispose();
+				new LoggedInPage(username);
+			}});
 		
 		loggedInFrame.add(heading);
 		loggedInFrame.add(sidePic);

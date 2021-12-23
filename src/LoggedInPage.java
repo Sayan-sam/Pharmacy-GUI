@@ -73,7 +73,7 @@ public class LoggedInPage {
 			{
 				try {
 					loggedInFrame.dispose();
-					new ManageUsers();
+					new ManageUsers(username);
 					
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -107,7 +107,7 @@ public class LoggedInPage {
 		dispUser.setBackground(Color.pink);
 		dispUser.setOpaque(true);
 		dispUser.setBounds(10,80,500,30);
-		dispUser.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		dispUser.setFont(new Font("Times New Roman", Font.PLAIN, 24));
 		
 		settings.setBounds(640,80,80,30);
 		settings.setFont(new Font("Times New Roman", Font.PLAIN, 9));

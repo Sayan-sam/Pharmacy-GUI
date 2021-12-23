@@ -31,7 +31,7 @@ public class CreateUser {
 	JComboBox<?> Type;
 	
 	
-	CreateUser()
+	CreateUser(String username)
 	{
 		String type[] = {"Select Type","Admin","User"};
 		Type = new JComboBox<Object>(type);
@@ -187,6 +187,8 @@ public class CreateUser {
 							SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
 							jm.createAccount(tfName.getText(), ft.format(selectedDate), tfusername.getText(),
 									tfpass.getText(), ((String)Type.getItemAt(Type.getSelectedIndex())));
+							new ManageUsers(username);
+							customerSignup.dispose();
 						}
 						else
 							usernameMatch();
@@ -232,7 +234,7 @@ public class CreateUser {
 			public void actionPerformed(ActionEvent e) {
 				customerSignup.dispose();
 				try {
-					new ManageUsers();
+					new ManageUsers(username);
 				} catch (Exception e1) {
 					e1.printStackTrace();
 				}
