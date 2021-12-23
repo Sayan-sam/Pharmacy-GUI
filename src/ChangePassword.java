@@ -11,7 +11,7 @@ import javax.swing.*;
 public class ChangePassword {
 	
 	jdbcmethods jm = new jdbcmethods();
-	JFrame changePasswordFrame = new JFrame("PHARMACY GUI");
+	JFrame changePasswordFrame = new JFrame("Change Password Portal");
 	JLabel lbUsername, lbCurrentPassword, lbNewPassword, lbConfirmNewPassword, matchPasswords, wrongDetails; 
 	JTextField tfUserName;
 	JPasswordField tfCurrentPassword, tfNewPassword, tfConfirmNewPassword;

@@ -7,7 +7,7 @@ import javax.swing.*;
 public class Accounts {
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame loggedInFrame = new JFrame("PHARMACY GUI");
+	JFrame loggedInFrame = new JFrame("Accounts");
 	JLabel heading, sidePic, dispUser;
 	JButton purchase, stock, sales, settings;
 	JMenuItem logOut, changePw, adminJobs, userManagement;
@@ -18,7 +18,7 @@ public class Accounts {
 	Accounts(String username)
 	{
 		heading = new JLabel(new ImageIcon("PharmacyM.png"));
-		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
+		sidePic = new JLabel(new ImageIcon("Accounts.png"));
 		purchase = new JButton("PURCHASE");
 		stock = new JButton("STOCK");
 		sales = new JButton("SALES");
@@ -27,8 +27,6 @@ public class Accounts {
 		
 		heading.setBounds(0,0,1080,80);
 		
-		sidePic.setBackground(Color.red);
-		sidePic.setOpaque(true);
 		sidePic.setBounds(720,80,360,645);
 		
 		dispUser.setForeground(Color.red);

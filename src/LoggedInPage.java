@@ -7,7 +7,7 @@ import javax.swing.*;
 public class LoggedInPage {
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame loggedInFrame = new JFrame("PHARMACY GUI");
+	JFrame loggedInFrame = new JFrame("PHARMACY MANAGEMENT");
 	JLabel heading, sidePic, dispUser;
 	JButton purchase, billing, accounts, settings;
 	JMenuItem logOut, changePw, adminPurchase, adminSales, userManagement;

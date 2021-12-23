@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 public class CustomerLogin {
 	
 	jdbcmethods jm = new jdbcmethods();
-	JFrame customerLogin = new JFrame();
+	JFrame customerLogin = new JFrame("Customer LogIn");
 	JLabel lphNum, loggin, wanttosign;
 	JTextField tfphNum;
 	JButton proceed, signup, cancel;

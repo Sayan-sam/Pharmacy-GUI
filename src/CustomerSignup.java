@@ -21,7 +21,7 @@ import org.jdatepicker.impl.UtilDateModel;
 public class CustomerSignup {
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame customerSignup = new JFrame();
+	JFrame customerSignup = new JFrame("Customer SignUp");
 	JLabel lFName, lLName, doB;
 	JLabel FNamempt, LNameempt, dobempt;
 	JTextField tfFName,tfLName, tdoB;

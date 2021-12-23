@@ -22,7 +22,7 @@ import org.jdatepicker.impl.UtilDateModel;
 public class CreateUser {
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame customerSignup = new JFrame();
+	JFrame customerSignup = new JFrame("Create User Portal");
 	JLabel lName, doB, lusername, lpassword;
 	JLabel Namempt, dobempt, usernamempt, passempt, typempt;
 	JTextField tfName, tdoB, tfusername, tfpass;

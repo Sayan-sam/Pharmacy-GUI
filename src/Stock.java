@@ -20,7 +20,7 @@ public class Stock {
 	
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame stock = new JFrame();
+	JFrame stock = new JFrame("Medicine Stock");
 	JLabel heading, sidePic, stockList;
 	JScrollPane scrollableStock;
 	JTable stockTable;
@@ -32,7 +32,7 @@ public class Stock {
 		stock.getContentPane().setLayout(new FlowLayout());
 		stockContent = new String[0][7];
 		heading = new JLabel(new ImageIcon("PharmacyM.png"));
-		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
+		sidePic = new JLabel(new ImageIcon("Stock.png"));
 		stockList = new JLabel("MEDICINE STOCK", SwingConstants.CENTER);
 		
 		DefaultTableModel model = new DefaultTableModel(stockContent, stockColumn)
@@ -106,8 +106,6 @@ public class Stock {
 		
 		heading.setBounds(0,0,1080,80);
 		
-		sidePic.setBackground(Color.red);
-		sidePic.setOpaque(true);
 		sidePic.setBounds(720,80,360,645);
 		
 		

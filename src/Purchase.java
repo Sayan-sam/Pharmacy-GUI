@@ -28,7 +28,7 @@ public class Purchase {
 	
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame stock = new JFrame();
+	JFrame stock = new JFrame("Purchase");
 	JLabel heading, sidePic, stockList;
 	JScrollPane scrollableBill;
 	JTable billTable;
@@ -45,7 +45,7 @@ public class Purchase {
 		stock.getContentPane().setLayout(new FlowLayout());
 		billContent = new String[0][3];
 		heading = new JLabel(new ImageIcon("PharmacyM.png"));
-		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
+		sidePic = new JLabel(new ImageIcon("Purchase.png"));
 		stockList = new JLabel("Purchase of the account "+username, SwingConstants.CENTER);
 		
 		DefaultTableModel model = new DefaultTableModel(billContent, billColumn)
@@ -149,8 +149,6 @@ public class Purchase {
 		
 		heading.setBounds(0,0,1080,80);
 		
-		sidePic.setBackground(Color.red);
-		sidePic.setOpaque(true);
 		sidePic.setBounds(720,80,360,645);
 		
 		

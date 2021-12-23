@@ -19,7 +19,7 @@ public class ManageUsers {
 	
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame stock = new JFrame();
+	JFrame stock = new JFrame("User Management");
 	JLabel heading, sidePic, stockList, lusername;
 	JLabel lName, lDOB, lStatus, lType, lDOJ;
 	JButton Update, Delete, Deactivate, Reset;
@@ -208,7 +208,7 @@ public class ManageUsers {
 		
 		stock.getContentPane().setLayout(new FlowLayout());
 		heading = new JLabel(new ImageIcon("PharmacyM.png"));
-		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
+		sidePic = new JLabel(new ImageIcon("User.png"));
 		stockList = new JLabel("Manage Users", SwingConstants.CENTER);
 		
 		stockList.setBounds(220,80,300,60);
@@ -217,8 +217,6 @@ public class ManageUsers {
 		
 		heading.setBounds(0,0,1080,80);
 		
-		sidePic.setBackground(Color.red);
-		sidePic.setOpaque(true);
 		sidePic.setBounds(720,80,360,645);
 		
 		lusername.setVisible(false);

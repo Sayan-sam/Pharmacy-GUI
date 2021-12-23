@@ -22,7 +22,6 @@ import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
@@ -31,7 +30,7 @@ import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 public class BillingPage {
 
 	jdbcmethods jm = new jdbcmethods();
-	JFrame billingPage = new JFrame();
+	JFrame billingPage = new JFrame("Billing Page");
 	JLabel heading, sidePic, lbmedName, lbquantity, lTotal;
 	JLabel enterMedName, enterQuantity, stockExceeded;
 	JTextField tfquantity;
@@ -51,7 +50,7 @@ public class BillingPage {
 		billingPage.getContentPane().setLayout(new FlowLayout());
 		billContent = new String[0][8];
 		heading = new JLabel(new ImageIcon("PharmacyM.png"));
-		sidePic = new JLabel("Here will go the demonstration pic", SwingConstants.CENTER);
+		sidePic = new JLabel(new ImageIcon("Billing.png"));
 		pm = new  JPopupMenu("Search Popup");
 		lbmedName = new JLabel("Medicine Name");
 		lbmedName.setFont(new Font("Times New Roman", Font.BOLD, 14));
@@ -131,8 +130,6 @@ public class BillingPage {
 		
 		heading.setBounds(0,0,1080,80);
 		
-		sidePic.setBackground(Color.red);
-		sidePic.setOpaque(true);
 		sidePic.setBounds(720,80,360,645);
 		
 		add.setBounds(550,130,80,30);
