@@ -294,20 +294,19 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👤 Author
 
-**Sayan Sam**
-- GitHub: [@yourusername](https://github.com/yourusername)
+**Sayan**
+- GitHub: [@Sayan-Sam](https://github.com/Sayan-sam)
 
 ## 🙏 Acknowledgments
 
 - Java Swing community for excellent documentation
 - SQLite team for the reliable embedded database
-- All contributors who have helped improve this project
 
 ## 📞 Support
 
 For support, please:
 - Open an issue on GitHub
-- Contact: your.email@example.com
+- Contact: sayanb1729@gmail.com
 
 ---
 
